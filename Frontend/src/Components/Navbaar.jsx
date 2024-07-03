@@ -1,9 +1,12 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import Login from './Login';
+import Logout from './Logout';
+import { useAuth } from '../context/AuthProvider';
 
 function Navbaar() {
 
+  const [authUser, setAuthUser] = useAuth();
   const [theme, setTheme] = useState(
     localStorage.getItem("them") ? localStorage.getItem("them") : "light"
   );
@@ -127,11 +130,15 @@ function Navbaar() {
                 </svg>
               </label>
           </div>
-          <div className=''>
-              <a className="bg-black text-white px-3 py-2 rounded-md hover:bg-yellow-200 hover:text-black duration-300 cursor-pointer"
-              onClick={() => document.getElementById("my_modal_3").showModal()}>Login</a>
-              <Login/>
-          </div>
+          {
+                authUser ? (<Logout/>) : (
+                  <div className=''>
+                    <a className="bg-black text-white px-3 py-2 rounded-md hover:bg-yellow-200 hover:text-black duration-300 cursor-pointer"
+                    onClick={() => document.getElementById("my_modal_3").showModal()}>Login</a>
+                    <Login/>
+                  </div>
+                )
+              }
         </div>
         </div>
       </div>  

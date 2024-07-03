@@ -1,0 +1,28 @@
+{
+  "name": "bookstore",
+  "version": "1.0.0",
+  "description": "mern based project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Debash1sh-Panda/bookStoreApp.git"
+  },
+  "author": "DebasishPanda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Debash1sh-Panda/bookStoreApp/issues"
+  },
+  "homepage": "https://github.com/Debash1sh-Panda/bookStoreApp#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.4",
+    "nodemon": "^3.1.4"
+  }
+}
