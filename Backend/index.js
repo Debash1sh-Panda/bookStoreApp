@@ -8,7 +8,7 @@ const userRoute = require("./route/user.route.js");
 //define cors
 bookShop.use(cors());
 
-//pars data into json format 
+//parse data into json format 
 bookShop.use(express.json());
 
 //define port
